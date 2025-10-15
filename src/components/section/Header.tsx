@@ -25,7 +25,7 @@ const Header = ({
           className="cursor-pointer relative pointer-events-auto transition-opacity duration-500 ease-in-out"
           onMouseEnter={linkEnter}
           onMouseLeave={linkLeave}
-          href="#"
+          href="https://chhavimani.vercel.app/"
         >
           <img className="size-32 mt-10" src="./iconFull.svg" alt="" />
           <img
