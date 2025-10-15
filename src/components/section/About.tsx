@@ -61,14 +61,14 @@ const About = ({
     <>
       {" "}
       <section id="about" ref={targetRef} className="w-full bg-red-700">
-        <div className="pt-48 pb-64 px-20">
+        <div className="pt-48 pb-64 px-5 lg:px-20">
           <div className="w-[1200px] mx-auto">
             <motion.div
               style={{
                 backgroundPositionY: 0,
                 backgroundPositionX: bgProgress,
               }}
-              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[12rem] font-extrabold leading-[180px]"
+              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
             >
               CODING IS
             </motion.div>
@@ -77,7 +77,7 @@ const About = ({
                 backgroundPositionY: 0,
                 backgroundPositionX: bgProgress1,
               }}
-              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[12rem] font-extrabold leading-[180px]"
+              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
             >
               MORE
             </motion.div>
@@ -86,7 +86,7 @@ const About = ({
                 backgroundPositionY: 0,
                 backgroundPositionX: bgProgress2,
               }}
-              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[12rem] font-extrabold leading-[180px]"
+              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
             >
               THAN JUST
             </motion.div>
@@ -95,7 +95,7 @@ const About = ({
                 backgroundPositionY: 0,
                 backgroundPositionX: bgProgress3,
               }}
-              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[12rem] font-extrabold leading-[180px]"
+              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
             >
               A JOB
             </motion.div>
@@ -110,15 +110,15 @@ const About = ({
       </section>
       <motion.section
         style={{ backgroundColor: colorChange }}
-        className="w-full transition-colors duration-500 ease-in-out px-20 pb-12"
+        className="w-full transition-colors duration-500 ease-in-out px-5 lg:px-20 pb-12"
       >
-        <div className="flex justify-between gap-4">
-          <div className="w-1/3 p-2.5">
-            <div className="relative bg-fixed bg-[url('/beach.png')] min-h-[770px] w-full bg-position-[-1%_0%] bg-no-repeat bg-size-[36%_auto] rounded-[50px] before:bg-[url('/noise-300x300.webp')] before:bg-position-[50%_50%] before:bg-no-repeat before:bg-cover before:content-[''] before:inset-0 before:absolute" />
+        <div className="flex flex-col lg:flex-row justify-between gap-4">
+          <div className="w-full lg:w-1/3 p-2.5">
+            <div className="relative bg-cover lg:bg-fixed bg-[url('/beach.png')] min-h-[400px] lg:min-h-[770px] w-full bg-no-repeat lg:bg-size-[36%_auto] rounded-3xl lg:rounded-[50px] before:bg-[url('/noise-300x300.webp')] before:bg-no-repeat before:bg-contain before:bg-cover before:content-[''] before:inset-0 before:absolute" />
           </div>
-          <div className="w-1/3 p-2.5 flex flex-col gap-5">
+          <div className="w-full lg:w-1/3 p-2.5 flex flex-col gap-5">
             <div className="w-full relative">
-              <div className="bg-fixed bg-[url('/coding.png')] bg-center bg-no-repeat overflow-hidden bg-contain rounded-4xl h-full">
+              <div className="lg:bg-fixed lg:bg-contain bg-cover bg-[url('/coding.png')] bg-center bg-no-repeat overflow-hidden rounded-4xl h-full">
                 <img
                   src="/noise-300x300.webp"
                   className="w-full h-[375px]"
@@ -127,7 +127,7 @@ const About = ({
               </div>
             </div>
             <div className="w-full relative">
-              <div className="bg-fixed bg-[url('/music.png')] bg-center bg-no-repeat overflow-hidden bg-contain rounded-4xl h-full">
+              <div className="lg:bg-fixed lg:bg-contain bg-cover bg-[url('/music.png')] bg-center bg-no-repeat overflow-hidden rounded-4xl h-full">
                 <img
                   src="/noise-300x300.webp"
                   className="w-full h-[375px]"
@@ -139,7 +139,7 @@ const About = ({
           <div
             onMouseEnter={textEnter}
             onMouseLeave={textLeave}
-            className="ml-10 w-1/3 p-2.5 font-roboto flex flex-col gap-8 tracking-wider leading-7 text-sky-100/95"
+            className="lg:ml-10 lg:w-1/3 p-2.5 font-roboto flex flex-col gap-8 tracking-wider leading-7 text-sky-100/95"
           >
             <div>
               <p>
@@ -176,7 +176,7 @@ const About = ({
           </div>
         </div>
         <motion.div style={{ opacity: skillOpacity }} className="w-full mt-24">
-          <p className="mx-auto w-max p-2.5 font-roboto flex flex-col gap-8 tracking-wide text-2xl leading-7 text-sky-100/95">
+          <p className="mx-auto lg:w-max text-center p-2.5 font-roboto flex flex-col gap-8 tracking-wide text-lg lg:text-2xl leading-7 text-sky-100/95 w-3/4">
             Some tools and tech skills I dabble on
           </p>
           <div className="gap-6 my-6 mx-auto flex justify-center items-center flex-wrap">

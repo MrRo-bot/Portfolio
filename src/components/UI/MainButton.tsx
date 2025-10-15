@@ -18,7 +18,7 @@ const MainButton = ({
         ease: "easeInOut",
         duration: 2,
       }}
-      className="mt-12 transition-all duration-500 ease-in-out w-max"
+      className="mt-8 lg:mt-12 transition-all duration-500 ease-in-out w-max"
     >
       <a
         onMouseEnter={linkEnter}
@@ -27,7 +27,7 @@ const MainButton = ({
         href={link}
         title={text}
       >
-        <button className="group text-red-700 text-center transition-all duration-300 select-none whitespace-nowrap overflow-visible m-0 relative inline-block outline-none border-none align-middle no-underline p-0 w-56 h-auto bg-[#5555] rounded-3xl hover:drop-shadow-[0_1px_12px_rgba(255,255,255,0.4)] hover:bg-pink-400">
+        <button className="group text-red-700 text-center transition-all duration-300 select-none whitespace-nowrap overflow-visible m-0 relative inline-block outline-none border-none align-middle no-underline p-0 w-44 lg:w-56 h-auto bg-[#5555] rounded-3xl hover:drop-shadow-[0_1px_12px_rgba(255,255,255,0.4)] hover:bg-pink-400">
           <span
             className="transition-all duration-450 ease-in-out relative block m-0 size-12 bg-red-600 rounded-3xl group-hover:w-full"
             aria-hidden="true"
@@ -40,7 +40,7 @@ const MainButton = ({
             "
             ></span>
           </span>
-          <span className="transition-all duration-450 ease-in-out absolute inset-0 p-3 ml-[2.85rem] text-sky-50 font-medium text-center uppercase">
+          <span className="transition-all duration-450 ease-in-out absolute text-sm lg:text-base inset-0 p-3 ml-[2.85rem] text-sky-50 font-medium text-center uppercase">
             {text}
           </span>
         </button>

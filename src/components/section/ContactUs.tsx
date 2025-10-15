@@ -14,19 +14,19 @@ const ContactUs = ({
   const opacity = useTransform(scrollProgress, [0.93, 0.94], [0, 1]);
 
   return (
-    <section id="contact" className="px-20 py-16">
+    <section id="contact" className="px-5 lg:px-20 py-16">
       <div className="w-full">
-        <div className="flex flex-col items-center justify-center mx-auto w-max">
+        <div className="flex flex-col items-center justify-center mx-auto lg:w-max">
           <h2>
             <motion.span
               style={{ transform: translateValue, opacity }}
-              className="inline-block transition-all duration-700 ease-in-out text-5xl font-black text-sky-50 mr-2"
+              className="inline-block transition-all duration-700 ease-in-out text-3xl lg:text-5xl font-black text-sky-50 mr-2"
             >
               GET IN
             </motion.span>
             <motion.span
               style={{ transform: translateValue, opacity }}
-              className="inline-block transition-all duration-700 ease-in-out text-5xl font-black text-red-700"
+              className="inline-block transition-all duration-700 ease-in-out text-3xl lg:text-5xl font-black text-red-700"
             >
               TOUCH
             </motion.span>
@@ -34,16 +34,16 @@ const ContactUs = ({
 
           <motion.p
             style={{ opacity }}
-            className="transition-all duration-500 ease-in-out text-sky-50/90 tracking-widest font-roboto mt-6 whitespace-break-spaces text-lg"
+            className="transition-all duration-500 ease-in-out text-sky-50/90 tracking-widest font-roboto mt-6 w-3/4 lg:text-lg lg:w-full text-center"
           >
             For questions, suggestions or anything else, a mail is enough to
             contact me.
           </motion.p>
 
           <div className="mb-4 mt-12 text-sky-50 text-lg font-roboto tracking-wider">
-            <div className="flex justify-center items-center gap-2 transition-colors duration-600 hover:text-red-700 focus:text-red-700 ">
+            <div className="flex justify-center items-center gap-2 transition-colors duration-600 hover:text-red-700 focus:text-red-700 w-3/4 lg:w-full mx-auto text-sm lg:text-base">
               <img
-                className="size-6 text-sky-50"
+                className="size-4 lg:size-6 text-sky-50"
                 src="./logos/mail.svg"
                 alt=""
               />
@@ -51,9 +51,9 @@ const ContactUs = ({
                 hello@chhavimanichoubey@outlook.in
               </a>
             </div>
-            <div className="flex mt-2 justify-center items-center gap-2 transition-colors duration-600 hover:text-red-700 focus:text-red-700 ">
+            <div className="flex mt-2 justify-center items-center gap-2 transition-colors duration-600 hover:text-red-700 focus:text-red-700 w-3/4 lg:w-full mx-auto text-sm lg:text-base">
               <img
-                className="size-6 text-sky-50"
+                className="size-4 lg:size-6 text-sky-50"
                 src="./logos/whatsapp.svg"
                 alt=""
               />

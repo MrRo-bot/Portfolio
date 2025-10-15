@@ -19,34 +19,23 @@ const Header = ({
       id="#"
       className="w-full sticky left-0 top-0 right-0 bg-transparent z-[999999] pointer-events-none"
     >
-      <div className="absolute flex justify-between items-center left-16 top-2 right-16">
+      <div className="absolute flex justify-between items-center top-2 left-4 right-4 sm:left-8 sm:right-8 md:left-12 md:right-12 lg:left-16 lg:right-16 xl:left-20 xl:right-20 2xl:left-24 2xl:right-24">
         <motion.a
           style={{ opacity }}
-          className="cursor-pointer relative pointer-events-auto transition-opacity duration-500 ease-in-out"
+          className="cursor-pointer pointer-events-auto transition-opacity duration-500 ease-in-out"
           onMouseEnter={linkEnter}
           onMouseLeave={linkLeave}
           href="https://chhavimani.vercel.app/"
         >
-          <img className="size-32 mt-10" src="./iconFull.svg" alt="" />
           <img
-            className="absolute size-2 top-26.5 left-9"
-            src="./eyes.svg"
-            alt=""
-          />
-          <img
-            className="absolute size-2 top-26.5 left-20"
-            src="./eyes.svg"
-            alt=""
-          />
-          <img
-            src="./moustache.png"
-            className="absolute h-28 w-32 top-21 -left-0.5"
+            className="size-16 sm:size-20 md:size-24 lg:size-28 xl:size-32 2xl:size-36 lg:mt-10"
+            src="./icon.svg"
             alt=""
           />
         </motion.a>
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="group pointer-events-auto transition-colors hover:bg-sky-50 focus:bg-sky-50 duration-700 before:content-[''] before:pointer-events-none before:inset-0 before:absolute before:animate-customPing before:rounded-full before:bg-sky-50/10 relative cursor-pointer p-3 rounded-full bg-red-800 size-16"
+          className="group pointer-events-auto transition-colors hover:bg-sky-50 focus:bg-sky-50 duration-700 before:content-[''] before:pointer-events-none before:inset-0 before:absolute before:animate-customPing before:rounded-full before:bg-sky-50/10 relative cursor-pointer p-3 rounded-full bg-red-800 size-12 sm:size-14 md:size-16 lg:size-18 xl:size-20 2xl:size-22"
         >
           <img
             onMouseEnter={linkEnter}

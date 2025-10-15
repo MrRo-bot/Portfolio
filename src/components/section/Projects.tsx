@@ -183,19 +183,19 @@ const Projects = ({
     <motion.section
       id="project"
       style={{ backgroundColor: colorChange }}
-      className="px-20 transition-colors duration-700 ease-in-out py-36"
+      className="px-5 lg:px-20 transition-colors duration-700 ease-in-out py-36"
     >
       <div className="w-[500px]">
         <h2>
           <motion.span
             style={{ transform: translateValue, opacity }}
-            className="inline-block text-5xl transition-all duration-700 ease-in-out font-black text-sky-50 mr-4"
+            className="inline-block text-3xl lg:text-5xl transition-all duration-700 ease-in-out font-black text-sky-50 mr-4"
           >
             MY
           </motion.span>
           <motion.span
             style={{ transform: translateValue, opacity }}
-            className="inline-block text-5xl transition-all duration-700 ease-in-out font-black text-red-700"
+            className="inline-block text-3xl lg:text-5xl transition-all duration-700 ease-in-out font-black text-red-700"
           >
             PROJECTS
           </motion.span>
@@ -203,7 +203,7 @@ const Projects = ({
 
         <motion.p
           style={{ opacity }}
-          className="transition-opacity duration-500 ease-in-out text-sky-50/50 tracking-widest font-roboto mt-4 whitespace-break-spaces"
+          className="transition-opacity duration-500 ease-in-out text-sky-50/50 tracking-widest font-roboto mt-4 w-9/12 lg:w-auto"
         >
           Here are a handful of projects. Move the mouse over the corresponding
           project.
@@ -213,23 +213,23 @@ const Projects = ({
         {projects.map((project, index) => (
           <div
             key={`${project.title}_${index}`}
-            className="flex w-full items-center justify-between gap-6"
+            className="flex w-full flex-col lg:flex-row items-center justify-between gap-2 lg:gap-6"
           >
-            <div className="w-1/2">
-              <h3 className="text-4xl py-2 font-bold text-sky-50">
+            <div className="w-full lg:w-1/2">
+              <h3 className="text-3xl lg:text-4xl py-2 font-bold text-sky-50">
                 {project.title}
               </h3>
-              <p className="my-4 text-xl text-sky-50/50 font-roboto">
+              <p className="my-4 lg:text-xl text-sky-50/50 font-roboto">
                 {project.description}
               </p>
-              <h4 className="text-lg py-2 font-semibold text-sky-50">
+              <h4 className="lg:text-lg py-2 font-semibold text-sky-50">
                 DEVELOPMENT TOOLS
               </h4>
               <div className="py-2 font-light text-sky-100 flex flex-wrap gap-2">
                 {project.skills.map((skill, skillIndex) => (
                   <p
                     key={`${skill}_${skillIndex}`}
-                    className="text-shadow-lg text-shadow-red-400/70 transition-all duration-500 hover:text-shadow-none focus:text-shadow-none hover:drop-shadow-[0_1px_6px_rgba(255,255,255,0.4)] focus:drop-shadow-[0_1px_6px_rgba(255,255,255,0.4)] px-2 py-1.5 rounded-full bg-red-600/50 border-1 border-solid border-sky-50/50"
+                    className="text-shadow-lg text-shadow-red-400/70 transition-all duration-500 hover:text-shadow-none focus:text-shadow-none hover:drop-shadow-[0_1px_6px_rgba(255,255,255,0.4)] focus:drop-shadow-[0_1px_6px_rgba(255,255,255,0.4)] text-sm lg:text-base px-1 lg:px-2 py-0.75 lg:py-1.5 rounded-full bg-red-600/50 border-1 border-solid border-sky-50/50"
                   >
                     {skill}
                   </p>
@@ -244,10 +244,10 @@ const Projects = ({
               </div>
             </div>
             <div
-              className={`relative cursor-grab bg-no-repeat bg-top self-start bg-contain w-1/2 ${
+              className={`relative cursor-grab bg-no-repeat bg-top self-start bg-contain w-full lg:w-1/2 ${
                 project.title === "Wetter Mobile"
-                  ? ""
-                  : 'h-[400px] bg-[url("/laptop.png")]'
+                  ? "h-[300px] lg:h-full"
+                  : 'h-[200px] lg:h-[400px] bg-[url("/laptop.png")]'
               }`}
             >
               <video
@@ -265,7 +265,7 @@ const Projects = ({
                 className={
                   project.title === "Wetter Mobile"
                     ? "absolute left-1/2 -translate-x-1/2 object-cover w-1/3 top-6 rounded-2xl"
-                    : "absolute object-cover aspect-video top-5 left-1/2 -translate-x-1/2 w-[79.5%] h-[81%]"
+                    : "absolute object-cover aspect-video top-3 lg:top-5 left-1/2 -translate-x-1/2 w-[77.5%] lg:w-[79.5%] h-[83%] lg:h-[81%]"
                 }
                 key={`video_${index}`}
               >

@@ -17,10 +17,10 @@ const Hero = ({
   const blurFilter = useTransform(blurValue, (latest) => `blur(${latest}px)`);
 
   return (
-    <section className="h-screen w-full flex overflow-hidden">
-      <div className="relative w-1/2">
+    <section className="h-full lg:h-screen lg:justify-normal w-full flex-col lg:flex-row flex overflow-hidden">
+      <div className="relative lg:w-1/2 mt-24 w-11/12 mx-auto">
         <div className="w-full h-full grid place-items-center">
-          <div className=" flex flex-col gap-6">
+          <div className="flex flex-col gap-6">
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ const Hero = ({
                 duration: 1,
                 delay: 1.5,
               }}
-              className="text-7xl font-black gap-4 flex text-sky-50 overflow-hidden"
+              className="text-7xl font-black gap-4 flex flex-col lg:flex-row text-sky-50 overflow-hidden"
             >
               <span
                 onMouseEnter={textEnter}
@@ -54,16 +54,19 @@ const Hero = ({
                 duration: 2,
                 delay: 0.5,
               }}
-              className="relative bg-red-700 p-1 box-decoration-clone outline-1 outline-dashed outline-sky-50"
+              className="bg-red-700 p-1 box-decoration-clone outline-1 outline-dashed outline-sky-50 w-11/12 lg:w-max wrap-break-word"
             >
-              <p className="w-max mx-auto text-2xl text-sky-50 font-light">
-                REACT & NATIVE DEVELOPER | UI UX DEVELOPER | MUSIC
+              <p className="mx-auto text-lg lg:text-2xl text-sky-50 font-light">
+                REACT & NATIVE DEVELOPER | UI UX DEVELOPER |{" "}
+                <span className="relative">
+                  MUSIC
+                  <img
+                    className="absolute min-w-32 lg:min-w-36 -rotate-2 top-6 left-1/2 lg:-left-2"
+                    src="./myHobby.svg"
+                    alt=""
+                  />
+                </span>
               </p>
-              <img
-                className="absolute w-44 -right-28 top-12 -rotate-2"
-                src="./myHobby.svg"
-                alt=""
-              />
             </motion.div>
 
             <MainButton
@@ -74,9 +77,9 @@ const Hero = ({
             />
           </div>
         </div>
-        <pre className="font-black font-roboto uppercase animate-pulse bottom-4 left-4 absolute size-max p-4 rounded-full bg-white text-center">{`Desktop\nView\nonly`}</pre>
+        <pre className="hidden lg:block font-black font-roboto text-xs uppercase animate-pulse bottom-4 left-4 px-4 absolute size-max rounded-full bg-white text-center">{`Desktop View\nfor\nbest experience`}</pre>
       </div>
-      <div className="w-1/2 animate-glow">
+      <div className="lg:w-1/2 animate-glow">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
