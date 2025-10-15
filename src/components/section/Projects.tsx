@@ -189,7 +189,7 @@ const Projects = ({
         <h2>
           <motion.span
             style={{ transform: translateValue, opacity }}
-            className="inline-block text-3xl lg:text-5xl transition-all duration-700 ease-in-out font-black text-sky-50 mr-4"
+            className="inline-block text-3xl lg:text-5xl transition-all duration-700 ease-in-out font-black text-sky-50 mr-2 sm:mr-4"
           >
             MY
           </motion.span>
@@ -203,7 +203,7 @@ const Projects = ({
 
         <motion.p
           style={{ opacity }}
-          className="transition-opacity duration-500 ease-in-out text-sky-50/50 tracking-widest font-roboto mt-4 w-9/12 lg:w-auto"
+          className="transition-opacity duration-500 ease-in-out text-sky-50/50 sm:tracking-widest font-roboto mt-4 w-7/12 sm:w-auto wrap-break-word sm:wrap-normal"
         >
           Here are a handful of projects. Move the mouse over the corresponding
           project.
@@ -246,7 +246,7 @@ const Projects = ({
             <div
               className={`relative cursor-grab bg-no-repeat bg-top self-start bg-contain w-full lg:w-1/2 ${
                 project.title === "Wetter Mobile"
-                  ? "h-[300px] lg:h-full"
+                  ? "h-[250px] sm:h-[300px] lg:h-full"
                   : 'h-[200px] lg:h-[400px] bg-[url("/laptop.png")]'
               }`}
             >
@@ -265,7 +265,7 @@ const Projects = ({
                 className={
                   project.title === "Wetter Mobile"
                     ? "absolute left-1/2 -translate-x-1/2 object-cover w-1/3 top-6 rounded-2xl"
-                    : "absolute object-cover aspect-video top-2.75 lg:top-5 left-1/2 -translate-x-1/2 w-[78%] lg:w-[79.5%] h-[83%] lg:h-[81%]"
+                    : "absolute object-cover aspect-video top-2 sm:top-2.75 lg:top-5 left-1/2 -translate-x-1/2 w-[80%] h-[63%] sm:w-[78%] lg:w-[79.5%] sm:h-[83%] lg:h-[81%]"
                 }
                 key={`video_${index}`}
               >

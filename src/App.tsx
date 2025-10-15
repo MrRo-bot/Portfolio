@@ -126,7 +126,7 @@ const App = () => {
 
       {isOpen && (
         <motion.nav
-          className="fixed flex flex-col items-start justify-center w-screen h-screen bg-black z-[99999] inset-0"
+          className="fixed flex flex-col items-start justify-start sm:justify-center w-screen h-screen bg-black z-[99999] inset-0"
           initial="closed"
           animate="open"
           custom={height}
@@ -141,7 +141,7 @@ const App = () => {
                 <motion.li
                   onMouseEnter={linkEnter}
                   onMouseLeave={linkLeave}
-                  className="before:absolute before:transition-transform before:duration-500 before:inset-0 before:delay-50 before:ease-in-out before:bg-red-700 before:-z-10 before:-translate-x-full hover:before:translate-x-0 overflow-hidden relative z-10 uppercase text-white font-black w-max cursor-pointer text-6xl text-left my-8 px-2 py-1"
+                  className="before:absolute before:transition-transform before:duration-500 before:inset-0 before:delay-50 before:ease-in-out before:bg-red-700 before:-z-10 before:-translate-x-full hover:before:translate-x-0 overflow-hidden relative z-10 uppercase text-white font-black w-max cursor-pointer text-5xl sm:text-6xl text-left my-8 px-2 py-1"
                   variants={navItemVariants}
                   whileTap={{ scale: 0.95 }}
                   key={i}

@@ -29,7 +29,7 @@ const Hero = ({
                 duration: 1,
                 delay: 1.5,
               }}
-              className="text-7xl font-black gap-4 flex flex-col lg:flex-row text-sky-50 overflow-hidden"
+              className="text-6xl sm:text-7xl font-black gap-4 flex flex-col lg:flex-row text-sky-50 overflow-hidden"
             >
               <span
                 onMouseEnter={textEnter}
@@ -54,9 +54,9 @@ const Hero = ({
                 duration: 2,
                 delay: 0.5,
               }}
-              className="bg-red-700 p-1 box-decoration-clone outline-1 outline-dashed outline-sky-50 w-11/12 lg:w-max wrap-break-word"
+              className="bg-red-700 p-1 box-decoration-clone outline-1 outline-dashed outline-sky-50 w-10/12 lg:w-max wrap-break-word"
             >
-              <p className="mx-auto text-lg lg:text-2xl text-sky-50 font-light">
+              <p className="mx-auto sm:text-lg lg:text-2xl text-sky-50 font-light">
                 REACT & NATIVE DEVELOPER | UI UX DEVELOPER |{" "}
                 <span className="relative">
                   MUSIC

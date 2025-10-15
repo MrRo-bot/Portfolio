@@ -48,7 +48,7 @@ const ContactUs = ({
                 alt=""
               />
               <a href="mailto:chhavimanichoubey@outlook.in">
-                hello@chhavimanichoubey@outlook.in
+                chhavimanichoubey@outlook.in
               </a>
             </div>
             <div className="flex mt-2 justify-center items-center gap-2 transition-colors duration-600 hover:text-red-700 focus:text-red-700 w-3/4 lg:w-full mx-auto text-sm lg:text-base">

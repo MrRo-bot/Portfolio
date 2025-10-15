@@ -68,7 +68,7 @@ const About = ({
                 backgroundPositionY: 0,
                 backgroundPositionX: bgProgress,
               }}
-              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
+              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[3rem] sm:text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
             >
               CODING IS
             </motion.div>
@@ -77,7 +77,7 @@ const About = ({
                 backgroundPositionY: 0,
                 backgroundPositionX: bgProgress1,
               }}
-              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
+              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[3rem] sm:text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
             >
               MORE
             </motion.div>
@@ -86,7 +86,7 @@ const About = ({
                 backgroundPositionY: 0,
                 backgroundPositionX: bgProgress2,
               }}
-              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
+              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[3rem] sm:text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
             >
               THAN JUST
             </motion.div>
@@ -95,13 +95,13 @@ const About = ({
                 backgroundPositionY: 0,
                 backgroundPositionX: bgProgress3,
               }}
-              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
+              className="transition-all ease-in-out text-transparent bg-clip-text bg-scroll bg-size-[200%_100%] bg-repeat bg-linear-[to_right,_#fff_50%,_#252525_50%] text-[3rem] sm:text-[4rem] lg:text-[12rem] font-extrabold leading-[160px] lg:leading-[180px]"
             >
               A JOB
             </motion.div>
             <motion.div
               style={{ translateY, opacity }}
-              className="transition-all ease-in-out text-7xl mt-14 font-extrabold text-[#333]"
+              className="transition-all ease-in-out text-3xl lg:text-7xl mt-14 font-extrabold text-[#333]"
             >
               CODING IS PASSION
             </motion.div>
@@ -188,10 +188,10 @@ const About = ({
                 <img
                   src={`./logos/${logos[logo]}`}
                   alt=""
-                  className="max-w-14 max-h-14 object-contain rounded-lg transition-transform duration-400 group-hover:scale-105 group-hover:rotate-360"
+                  className="max-w-14 max-h-14 object-contain rounded-lg transition-transform duration-400 group-hover:scale-105 group-hover:rotate-360 group-focus:scale-105 group-focus:rotate-360 group-active:scale-105 group-active:rotate-360"
                 />
 
-                <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 scale-y-0 group-hover:scale-y-100 transition-transform duration-400 w-max max-w-xs bg-sky-50 text-red-700 text-sm rounded-lg font-bold px-3 py-2 shadow-lg">
+                <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 scale-y-0 group-hover:scale-y-100 group-focus:scale-y-100 group-active:scale-y-100 transition-transform duration-400 w-max max-w-xs bg-sky-50 text-red-700 text-sm rounded-lg font-bold px-3 py-2 shadow-lg">
                   {logo}
                   <div className="absolute left-1/2 -translate-x-1/2 -bottom-1.25 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-sky-50 w-0 h-0"></div>
                 </div>
