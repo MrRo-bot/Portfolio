@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins";
+  --font-roboto: "Roboto Mono";
+
+  --animate-noise: noiseKeyframes 1s steps(10) infinite;
+  @keyframes noiseKeyframes {
+    100% {
+      background-position: -100% 100%;
+    }
+  }
+
+  --animate-glow: glowKeyframes 4s ease-in-out infinite alternate none running;
+  @keyframes glowKeyframes {
+    0% {
+      filter: drop-shadow(0 0 120px rgb(189 10 10 / 0.9));
+    }
+    100% {
+      filter: drop-shadow(0 0 10px rgb(50 49 56 / 0.1));
+    }
+    0% {
+      filter: drop-shadow(0 0 120px rgb(189 10 10 / 0.9));
+    }
+    100% {
+      filter: drop-shadow(0 0 10px rgb(50 49 56 / 0.1));
+    }
+  }
+
+  --animate-nameAnimation: nameAnimationKeyframes 10s linear infinite;
+  @keyframes nameAnimationKeyframes {
+    100% {
+      background-position: 2000px 0;
+    }
+  }
+
+  --animate-marquee: marqueeKeyframes 70s linear 0s infinite normal none running;
+  @keyframes marqueeKeyframes {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  --animate-customPing: pingKeyframes 4s cubic-bezier(0, 0, 0.2, 1) 3s infinite
+    normal none running;
+  @keyframes pingKeyframes {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
+
+/* * {
+  outline: 0.5px solid red;
+} */
+
+body {
+  background-color: #333;
+}
+
+.strokeClass {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #f2f2f2;
+}
+
+.strokeClass2 {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+}
