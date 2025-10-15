@@ -35,7 +35,7 @@ const Header = ({
         </motion.a>
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="group pointer-events-auto transition-colors hover:bg-sky-50 focus:bg-sky-50 duration-700 before:content-[''] before:pointer-events-none before:inset-0 before:absolute before:animate-customPing before:rounded-full before:bg-sky-50/10 relative cursor-pointer p-3 rounded-full bg-red-800 size-12 sm:size-14 md:size-16 lg:size-18 xl:size-20 2xl:size-22"
+          className="group pointer-events-auto transition-colors hover:bg-sky-50 focus:bg-sky-50 duration-700 before:content-[''] before:pointer-events-none before:inset-0 before:absolute before:animate-customPing before:rounded-full before:bg-sky-50/10 relative cursor-pointer p-3 lg:p-4 rounded-full bg-red-800 size-12 sm:size-14 md:size-16 lg:size-18"
         >
           <img
             onMouseEnter={linkEnter}

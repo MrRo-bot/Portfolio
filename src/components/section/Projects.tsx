@@ -265,7 +265,7 @@ const Projects = ({
                 className={
                   project.title === "Wetter Mobile"
                     ? "absolute left-1/2 -translate-x-1/2 object-cover w-1/3 top-6 rounded-2xl"
-                    : "absolute object-cover aspect-video top-3 lg:top-5 left-1/2 -translate-x-1/2 w-[77.5%] lg:w-[79.5%] h-[83%] lg:h-[81%]"
+                    : "absolute object-cover aspect-video top-2.75 lg:top-5 left-1/2 -translate-x-1/2 w-[78%] lg:w-[79.5%] h-[83%] lg:h-[81%]"
                 }
                 key={`video_${index}`}
               >
