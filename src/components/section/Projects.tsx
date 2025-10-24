@@ -243,13 +243,7 @@ const Projects = ({
                 <ProjectButton href={project.demoLink} title={"View Demo"} />
               </div>
             </div>
-            <div
-              className={`relative cursor-grab bg-no-repeat bg-top self-start bg-contain w-full lg:w-1/2 ${
-                project.title === "Wetter Mobile"
-                  ? "h-[250px] sm:h-[300px] lg:h-full"
-                  : 'h-[200px] lg:h-[400px] bg-[url("/laptop.png")]'
-              }`}
-            >
+            <div className={`relative cursor-grab w-full lg:w-1/2 h-max`}>
               <video
                 onMouseEnter={projectEnter}
                 onMouseLeave={projectLeave}
@@ -262,11 +256,7 @@ const Projects = ({
                 onMouseOver={() => handleMouseOver(index)}
                 onMouseOut={() => handleMouseOut(index)}
                 poster={project.poster}
-                className={
-                  project.title === "Wetter Mobile"
-                    ? "absolute left-1/2 -translate-x-1/2 object-cover w-1/3 top-6 rounded-2xl"
-                    : "absolute object-cover aspect-video top-2 sm:top-2.75 lg:top-5 left-1/2 -translate-x-1/2 w-[80%] h-[63%] sm:w-[78%] lg:w-[79.5%] sm:h-[83%] lg:h-[81%]"
-                }
+                className="rounded-2xl mx-auto aspect-video"
                 key={`video_${index}`}
               >
                 <source src={project.src} type="video/mp4" />
