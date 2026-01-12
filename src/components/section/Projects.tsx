@@ -139,15 +139,6 @@ const Projects = ({
       githubLink: "https://github.com/MrRo-bot/Wetter",
       demoLink: "https://wetterforecast.netlify.app/",
     },
-    {
-      title: "The Dark Room Photography",
-      description: "Basic portfolio website for a photography business",
-      skills: ["HTML", "CSS", "JavaScript", "Jquery"],
-      src: "./videos/Dark_Room_Photography_DESKTOP.mp4",
-      poster: "./videos/Dark_Room_Photography_DESKTOP.png",
-      githubLink: "https://github.com/MrRo-bot/The-Dark-Room-Photography",
-      demoLink: "https://thedarkroomphotography.netlify.app/",
-    },
   ];
 
   const handleMouseOver = (index: number) => {
