@@ -1,22 +1,6 @@
-const Footer = () => {
-  const links: { name: string; link: string }[] = [
-    { name: "linkedin", link: "https://www.linkedin.com/in/cm-ch/" },
-    {
-      name: "discord",
-      link: "https://discordapp.com/users/434001308484239381",
-    },
-    { name: "github", link: "https://github.com/MrRo-bot/" },
-    {
-      name: "hackerrank",
-      link: "https://www.hackerrank.com/profile/chhavimanichoub1",
-    },
-    { name: "tvtime", link: "https://tvtime.com/r/3e5vr" },
-    {
-      name: "youtube",
-      link: "https://www.youtube.com/@chhavimanichoubey9437",
-    },
-  ];
+import { links } from "../../utils/constants";
 
+const Footer = () => {
   return (
     <>
       <footer className="py-3 lg:py-6 mt-6 lg:mt-12 overflow-hidden">
@@ -54,6 +38,7 @@ const Footer = () => {
               className="group flex size-10 sm:size-12 lg:size-14 transition-all duration-500 ease-in-out items-center justify-center rounded-full text-red-700 hover:text-sky-50 focus:text-sky-50 p-2 bg-red-700 hover:bg-black focus:bg-black hover:drop-shadow-[0_1px_12px_rgba(255,255,255,0.4)] focus:drop-shadow-[0_1px_12px_rgba(255,255,255,0.4)]"
             >
               <img
+                loading="lazy"
                 className="w-full h-full group-hover:rotate-y-360 group-focus:rotate-y-360 transition-all duration-500 ease-in-out"
                 src={"./logos/" + link.name + ".svg"}
                 alt=""

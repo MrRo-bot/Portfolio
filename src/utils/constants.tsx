@@ -1,0 +1,220 @@
+interface Projects {
+  title: string;
+  description: string;
+  skills: string[];
+  src: string;
+  poster: string;
+  demoLink: string;
+  githubLink: string;
+}
+
+interface Music {
+  src: string;
+  poster: string;
+  name: string;
+  type: string;
+}
+
+export const projects: Projects[] = [
+  {
+    title: "Wetter Mobile",
+    description: "React Native Expo based app for minimalist weather app.",
+    skills: [
+      "expo",
+      "expo-asset",
+      "expo-location",
+      "expo-notifications",
+      "zustand",
+      "tanstack/react-query",
+      "nativewind",
+      "tailwindcss",
+      "react",
+      "react-native",
+      "typescript",
+      "react-native-async-storage/async-storage",
+      "react-native-community/netinfo",
+      "react-native-community/datetimepicker",
+      "react-native-gifted-charts",
+      "react-native-image-colors",
+      "react-native-paper",
+      "react-native-reanimated",
+      "react-native-svg",
+    ],
+    src: "./videos/Wetter_MOBILE.mp4",
+    poster: "./videos/Wetter_MOBILE.webp",
+    githubLink: "https://github.com/MrRo-bot/Wetter_Mobile",
+    demoLink: "https://github.com/MrRo-bot/Wetter_Mobile/releases/",
+  },
+  {
+    title: "YouPipe",
+    description:
+      "YouTube Clone with Glassmorphism design and popular web technologies",
+    skills: [
+      "React.js",
+      "TailwindCSS",
+      "Express",
+      "Node.js",
+      "Motion",
+      "Vite",
+      "NPM",
+      "Google Auth Library",
+      "React Redux",
+      "React Router",
+      "React Virtuoso",
+      "React Toastify",
+      "React Loading Skeleton",
+      "React Icons",
+      "React OAuth Google",
+    ],
+    src: "./videos/YouPipe_DESKTOP.mp4",
+    poster: "./videos/YouPipe_DESKTOP.webp",
+    githubLink: "https://github.com/MrRo-bot/YouPipe",
+    demoLink: "https://youpipe-frontend.vercel.app/",
+  },
+  {
+    title: "Despesa",
+    description: "Money manager build with MERN stack",
+    skills: [
+      "React.js",
+      "React Virtuoso",
+      "React Toastify",
+      "React Loading Skeleton",
+      "React Number Format",
+      "React Icons",
+      "TailwindCSS",
+      "MongoDB",
+      "Express",
+      "Node.js",
+      "Apollo",
+      "Chart.js",
+      "DaisyUI",
+      "Motion",
+      "ReactRouter",
+      "Vite",
+      "NPM",
+      "Firefox",
+      "Passport.js Auth Library",
+      "Nanoid",
+      "Bcrypt",
+    ],
+    src: "./videos/Despesa_DESKTOP.mp4",
+    poster: "./videos/Despesa_DESKTOP.webp",
+    githubLink: "https://github.com/MrRo-bot/Despesa",
+    demoLink: "https://despesa-frontend.vercel.app/",
+  },
+  {
+    title: "Mousike",
+    description: "Spotify UI clone with neomorphism design ",
+    skills: [
+      "@fortawesome/react-fontawesome",
+      "Nanoid",
+      "React.js",
+      "React Confetti",
+      "React Loading Skeleton",
+      "React Number Format",
+      "spotify-web-api-js",
+      "Immer",
+      "Motion",
+      "React Router",
+      "TailwindCSS",
+      "Vite",
+    ],
+    src: "./videos/Mousike_DESKTOP.mp4",
+    poster: "./videos/Mousike_DESKTOP.webp",
+    githubLink: "https://github.com/MrRo-bot/Mousike",
+    demoLink: "https://mousike.netlify.app/",
+  },
+  {
+    title: "Wetter",
+    description: "Weather app with minimal design ",
+    skills: ["React", "TailwindCSS", "JavaScript", "ES6", "Vite", "NPM"],
+    src: "./videos/Wetter_DESKTOP.mp4",
+    poster: "./videos/Wetter_DESKTOP.webp",
+    githubLink: "https://github.com/MrRo-bot/Wetter",
+    demoLink: "https://wetterforecast.netlify.app/",
+  },
+];
+
+export const logos: { [key: string]: string } = {
+  JavaScript: "javascript.svg",
+  HTML: "html.svg",
+  CSS: "css.svg",
+  TailwindCSS: "tailwindcss.svg",
+  "VS Code": "vscode.svg",
+  TypeScript: "typescript.svg",
+  "Tanstack Query": "tanstack.svg",
+  "React Router": "reactrouter.svg",
+  Zustand: "zustand.svg",
+  Figma: "figma.svg",
+  Git: "git.svg",
+  Vite: "vite.svg",
+  "Express.js": "express.svg",
+  Apollo: "apollo.svg",
+  GitHub: "github_color.svg",
+  GraphQL: "graphql.svg",
+  MongoDB: "mongo.svg",
+  MySQL: "mysql.svg",
+  "Node.js": "nodejs.svg",
+  npm: "npm.svg",
+  Redux: "redux.svg",
+  SASS: "sass.svg",
+  "React.js": "react.svg",
+  Expo: "expo.svg",
+};
+
+export const links: { name: string; link: string }[] = [
+  { name: "linkedin", link: "https://www.linkedin.com/in/cm-ch/" },
+  {
+    name: "discord",
+    link: "https://discordapp.com/users/434001308484239381",
+  },
+  { name: "github", link: "https://github.com/MrRo-bot/" },
+  {
+    name: "hackerrank",
+    link: "https://www.hackerrank.com/profile/chhavimanichoub1",
+  },
+  { name: "tvtime", link: "https://tvtime.com/r/3e5vr" },
+  {
+    name: "youtube",
+    link: "https://www.youtube.com/@chhavimanichoubey9437",
+  },
+];
+
+export const music: Music[] = [
+  {
+    poster: "./music/Game_Launch.webp",
+    src: "https://youtu.be/9dFY9W5OFzo",
+    name: "Game Launch",
+    type: "Dance",
+  },
+  {
+    poster: "./music/Impuissant.webp",
+    src: "https://youtu.be/_8-GU9fZht0",
+    name: "Impuissant",
+    type: "Hip-Hop",
+  },
+  {
+    poster: "./music/Learning_Curve.webp",
+    src: "https://youtu.be/KkKxuSDEJdo",
+    name: "Learning Curve",
+    type: "Lo-Fi",
+  },
+  {
+    poster: "./music/Low_On_Fidelity.webp",
+    src: "https://youtu.be/Strv_PtWG7M",
+    name: "Low On Fidelity",
+    type: "Lo-Fi",
+  },
+  {
+    poster: "./music/Not_Alike.webp",
+    src: "https://youtu.be/bV8bxGqmviE",
+    name: "Not Alike",
+    type: "Rap",
+  },
+  {
+    poster: "./music/The_House_Of_The_Falling_Sun.webp",
+    src: "https://youtu.be/irhduFFIFWI",
+    name: "The House Of The Falling Sun",
+    type: "Cover",
+  },
+];

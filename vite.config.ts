@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+// import { analyzer } from "vite-bundle-analyzer";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -11,5 +12,6 @@ export default defineConfig({
       },
     }),
     tailwindcss(),
+    // analyzer({ analyzerPort: 8000 }),
   ],
 });

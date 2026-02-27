@@ -1,19 +1,21 @@
 import { motion, MotionValue } from "motion/react";
 import type { Dispatch, SetStateAction } from "react";
 
+interface Header {
+  linkEnter: () => void;
+  linkLeave: () => void;
+  opacity: MotionValue<number>;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  isOpen: boolean;
+}
+
 const Header = ({
   linkEnter,
   linkLeave,
   opacity,
   setIsOpen,
   isOpen,
-}: {
-  linkEnter: () => void;
-  linkLeave: () => void;
-  opacity: MotionValue<number>;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
-  isOpen: boolean;
-}) => {
+}: Header) => {
   return (
     <header
       id="#"
@@ -30,6 +32,7 @@ const Header = ({
           <img
             className="size-16 sm:size-20 md:size-24 lg:size-28 xl:size-32 2xl:size-36 lg:mt-10"
             src="./icon.svg"
+            fetchPriority="high"
             alt=""
           />
         </motion.a>
@@ -42,6 +45,7 @@ const Header = ({
             onMouseLeave={linkLeave}
             className="invert-100 group-hover:invert-0 group-focus:invert-0 transition-colors duration-500"
             src="./menu.svg"
+            fetchPriority="high"
             alt=""
           />
         </div>

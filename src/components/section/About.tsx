@@ -1,6 +1,15 @@
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 // import MainButton from "../UI/MainButton";
+import { logos } from "../../utils/constants";
 import { useRef } from "react";
+
+interface About {
+  textEnter: () => void;
+  textLeave: () => void;
+  // linkEnter: () => void;
+  // linkLeave: () => void;
+  scrollProgress: MotionValue<number>;
+}
 
 const About = ({
   textEnter,
@@ -8,39 +17,7 @@ const About = ({
   // linkEnter,
   // linkLeave,
   scrollProgress,
-}: {
-  textEnter: () => void;
-  textLeave: () => void;
-  // linkEnter: () => void;
-  // linkLeave: () => void;
-  scrollProgress: MotionValue<number>;
-}) => {
-  const logos: { [key: string]: string } = {
-    JavaScript: "javascript.svg",
-    HTML: "html.svg",
-    CSS: "css.svg",
-    TailwindCSS: "tailwindcss.svg",
-    "VS Code": "vscode.svg",
-    TypeScript: "typescript.svg",
-    "Tanstack Query": "tanstack.svg",
-    "React Router": "reactrouter.svg",
-    Zustand: "zustand.svg",
-    Figma: "figma.svg",
-    Git: "git.svg",
-    Vite: "vite.svg",
-    "Express.js": "express.svg",
-    Apollo: "apollo.svg",
-    GitHub: "github_color.svg",
-    GraphQL: "graphql.svg",
-    MongoDB: "mongo.svg",
-    MySQL: "mysql.svg",
-    "Node.js": "nodejs.svg",
-    npm: "npm.svg",
-    Redux: "redux.svg",
-    SASS: "sass.svg",
-    "React.js": "react.svg",
-    Expo: "expo.svg",
-  };
+}: About) => {
   const targetRef = useRef(null);
   const { scrollYProgress: y1 } = useScroll({ target: targetRef });
 
@@ -54,7 +31,7 @@ const About = ({
   const colorChange = useTransform(
     scrollProgress,
     [0.3, 0.33],
-    ["#c10007", "#3331"]
+    ["#c10007", "#3331"],
   );
 
   return (
@@ -114,11 +91,11 @@ const About = ({
       >
         <div className="flex flex-col lg:flex-row justify-between gap-4">
           <div className="w-full lg:w-1/3 p-2.5">
-            <div className="relative bg-cover lg:bg-fixed bg-[url('/beach.png')] min-h-[400px] lg:min-h-[770px] w-full bg-no-repeat lg:bg-size-[36%_auto] rounded-3xl lg:rounded-[50px] before:bg-[url('/noise-300x300.webp')] before:bg-no-repeat before:bg-contain before:bg-cover before:content-[''] before:inset-0 before:absolute" />
+            <div className="relative bg-cover lg:bg-fixed bg-[url('/beach.webp')] min-h-[400px] lg:min-h-[770px] w-full bg-no-repeat lg:bg-size-[36%_auto] rounded-3xl lg:rounded-[50px] before:bg-[url('/noise-300x300.webp')] before:bg-no-repeat before:bg-contain before:bg-cover before:content-[''] before:inset-0 before:absolute" />
           </div>
           <div className="w-full lg:w-1/3 p-2.5 flex flex-col gap-5">
             <div className="w-full relative">
-              <div className="lg:bg-fixed lg:bg-contain bg-cover bg-[url('/coding.png')] bg-center bg-no-repeat overflow-hidden rounded-4xl h-full">
+              <div className="lg:bg-fixed lg:bg-contain bg-cover bg-[url('/coding.webp')] bg-center bg-no-repeat overflow-hidden rounded-4xl h-full">
                 <img
                   src="/noise-300x300.webp"
                   className="w-full h-[375px]"
@@ -127,7 +104,7 @@ const About = ({
               </div>
             </div>
             <div className="w-full relative">
-              <div className="lg:bg-fixed lg:bg-contain bg-cover bg-[url('/music.png')] bg-center bg-no-repeat overflow-hidden rounded-4xl h-full">
+              <div className="lg:bg-fixed lg:bg-contain bg-cover bg-[url('/music.webp')] bg-center bg-no-repeat overflow-hidden rounded-4xl h-full">
                 <img
                   src="/noise-300x300.webp"
                   className="w-full h-[375px]"
@@ -179,7 +156,7 @@ const About = ({
           <p className="mx-auto lg:w-max text-center p-2.5 font-roboto flex flex-col gap-8 tracking-wide text-lg lg:text-2xl leading-7 text-sky-100/95 w-3/4">
             Some tools and tech skills I dabble on
           </p>
-          <div className="gap-6 my-6 mx-auto flex justify-center items-center flex-wrap">
+          <div className="gap-6 my-6 mx-auto flex justify-center items-center flex-wrap lg:w-3/4">
             {Object.keys(logos).map((logo, index) => (
               <div
                 key={`${logo}_${index}`}
@@ -188,6 +165,7 @@ const About = ({
                 <img
                   src={`./logos/${logos[logo]}`}
                   alt=""
+                  loading="lazy"
                   className="max-w-14 max-h-14 object-contain rounded-lg transition-transform duration-400 group-hover:scale-105 group-hover:rotate-360 group-focus:scale-105 group-focus:rotate-360 group-active:scale-105 group-active:rotate-360"
                 />
 

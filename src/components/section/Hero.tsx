@@ -1,19 +1,21 @@
 import { motion, MotionValue, useTransform } from "motion/react";
 import MainButton from "../UI/MainButton";
 
+interface Hero {
+  textEnter: () => void;
+  linkEnter: () => void;
+  textLeave: () => void;
+  linkLeave: () => void;
+  blurValue: MotionValue<number>;
+}
+
 const Hero = ({
   textEnter,
   textLeave,
   linkEnter,
   linkLeave,
   blurValue,
-}: {
-  textEnter: () => void;
-  linkEnter: () => void;
-  textLeave: () => void;
-  linkLeave: () => void;
-  blurValue: MotionValue<number>;
-}) => {
+}: Hero) => {
   const blurFilter = useTransform(blurValue, (latest) => `blur(${latest}px)`);
 
   return (
@@ -61,6 +63,7 @@ const Hero = ({
                 <span className="relative">
                   MUSIC
                   <img
+                    fetchPriority="high"
                     className="absolute min-w-32 lg:min-w-36 -rotate-2 top-6 left-1/2 lg:-left-2"
                     src="./myHobby.svg"
                     alt=""
@@ -92,7 +95,8 @@ const Hero = ({
           <motion.img
             style={{ filter: blurFilter }}
             className="transition-all ease-in-out"
-            src="./myImage.png"
+            src="./myImage.webp"
+            fetchPriority="high"
             alt=""
           />
         </motion.div>

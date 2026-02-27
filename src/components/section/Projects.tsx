@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, MotionValue, useTransform } from "motion/react";
 import ProjectButton from "../UI/ProjectButton";
+import { projects } from "../../utils/constants";
 
 const Projects = ({
   projectEnter,
@@ -12,134 +13,6 @@ const Projects = ({
   scrollProgress: MotionValue<number>;
 }) => {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-
-  const projects: {
-    title: string;
-    description: string;
-    skills: string[];
-    src: string;
-    poster: string;
-    demoLink: string;
-    githubLink: string;
-  }[] = [
-    {
-      title: "Wetter Mobile",
-      description: "React Native Expo based app for minimalist weather app. ",
-      skills: [
-        "expo",
-        "expo-asset",
-        "expo-location",
-        "expo-notifications",
-        "zustand",
-        "tanstack/react-query",
-        "nativewind",
-        "tailwindcss",
-        "react",
-        "react-native",
-        "typescript",
-        "react-native-async-storage/async-storage",
-        "react-native-community/netinfo",
-        "react-native-community/datetimepicker",
-        "react-native-gifted-charts",
-        "react-native-image-colors",
-        "react-native-paper",
-        "react-native-reanimated",
-        "react-native-svg",
-      ],
-      src: "./videos/Wetter_MOBILE.mp4",
-      poster: "./videos/Wetter_MOBILE.png",
-      githubLink: "https://github.com/MrRo-bot/Wetter_Mobile",
-      demoLink: "https://github.com/MrRo-bot/Wetter_Mobile/releases/",
-    },
-    {
-      title: "YouPipe",
-      description:
-        "YouTube Clone with Glassmorphism design and popular web technologies",
-      skills: [
-        "React.js",
-        "TailwindCSS",
-        "Express",
-        "Node.js",
-        "Motion",
-        "Vite",
-        "NPM",
-        "Google Auth Library",
-        "React Redux",
-        "React Router",
-        "React Virtuoso",
-        "React Toastify",
-        "React Loading Skeleton",
-        "React Icons",
-        "React OAuth Google",
-      ],
-      src: "./videos/YouPipe_DESKTOP.mp4",
-      poster: "./videos/YouPipe_DESKTOP.png",
-      githubLink: "https://github.com/MrRo-bot/YouPipe",
-      demoLink: "https://youpipe-frontend.vercel.app/",
-    },
-    {
-      title: "Despesa",
-      description: "Money manager build with MERN stack",
-      skills: [
-        "React.js",
-        "React Virtuoso",
-        "React Toastify",
-        "React Loading Skeleton",
-        "React Number Format",
-        "React Icons",
-        "TailwindCSS",
-        "MongoDB",
-        "Express",
-        "Node.js",
-        "Apollo",
-        "Chart.js",
-        "DaisyUI",
-        "Motion",
-        "ReactRouter",
-        "Vite",
-        "NPM",
-        "Firefox",
-        "Passport.js Auth Library",
-        "Nanoid",
-        "Bcrypt",
-      ],
-      src: "./videos/Despesa_DESKTOP.mp4",
-      poster: "./videos/Despesa_DESKTOP.png",
-      githubLink: "https://github.com/MrRo-bot/Despesa",
-      demoLink: "https://despesa-frontend.vercel.app/",
-    },
-    {
-      title: "Mousike",
-      description: "Spotify UI clone with neomorphism design ",
-      skills: [
-        "@fortawesome/react-fontawesome",
-        "Nanoid",
-        "React.js",
-        "React Confetti",
-        "React Loading Skeleton",
-        "React Number Format",
-        "spotify-web-api-js",
-        "Immer",
-        "Motion",
-        "React Router",
-        "TailwindCSS",
-        "Vite",
-      ],
-      src: "./videos/Mousike_DESKTOP.mp4",
-      poster: "./videos/Mousike_DESKTOP.png",
-      githubLink: "https://github.com/MrRo-bot/Mousike",
-      demoLink: "https://mousike.netlify.app/",
-    },
-    {
-      title: "Wetter",
-      description: "Weather app with minimal design ",
-      skills: ["React", "TailwindCSS", "JavaScript", "ES6", "Vite", "NPM"],
-      src: "./videos/Wetter_DESKTOP.mp4",
-      poster: "./videos/Wetter_DESKTOP.png",
-      githubLink: "https://github.com/MrRo-bot/Wetter",
-      demoLink: "https://wetterforecast.netlify.app/",
-    },
-  ];
 
   const handleMouseOver = (index: number) => {
     const video = videoRefs.current[index];
@@ -159,7 +32,7 @@ const Projects = ({
   const translateY = useTransform(scrollProgress, [0.39, 0.4], [50, 0]);
   const translateValue = useTransform(
     translateY,
-    (latest) => `translateY(${latest}px)`
+    (latest) => `translateY(${latest}px)`,
   );
 
   const opacity = useTransform(scrollProgress, [0.39, 0.4], [0, 1]);
@@ -167,7 +40,7 @@ const Projects = ({
   const colorChange = useTransform(
     scrollProgress,
     [0.63, 0.67],
-    ["#3331", "#c10007"]
+    ["#3331", "#c10007"],
   );
 
   return (
@@ -241,7 +114,7 @@ const Projects = ({
                 ref={(el) => {
                   videoRefs.current[index] = el;
                 }}
-                preload="none"
+                preload="metadata"
                 muted
                 playsInline
                 onMouseOver={() => handleMouseOver(index)}

@@ -1,57 +1,17 @@
 import { motion, MotionValue, useTransform } from "motion/react";
+import { music } from "../../utils/constants";
 
-const Hobbies = ({
-  linkEnter,
-  linkLeave,
-  scrollProgress,
-}: {
+interface Hobbies {
   linkEnter: () => void;
   linkLeave: () => void;
   scrollProgress: MotionValue<number>;
-}) => {
-  const music: { src: string; poster: string; name: string; type: string }[] = [
-    {
-      poster: "./music/Game_Launch.webp",
-      src: "https://youtu.be/9dFY9W5OFzo",
-      name: "Game Launch",
-      type: "Dance",
-    },
-    {
-      poster: "./music/Impuissant.webp",
-      src: "https://youtu.be/_8-GU9fZht0",
-      name: "Impuissant",
-      type: "Hip-Hop",
-    },
-    {
-      poster: "./music/Learning_Curve.webp",
-      src: "https://youtu.be/KkKxuSDEJdo",
-      name: "Learning Curve",
-      type: "Lo-Fi",
-    },
-    {
-      poster: "./music/Low_On_Fidelity.webp",
-      src: "https://youtu.be/Strv_PtWG7M",
-      name: "Low On Fidelity",
-      type: "Lo-Fi",
-    },
-    {
-      poster: "./music/Not_Alike.webp",
-      src: "https://youtu.be/bV8bxGqmviE",
-      name: "Not Alike",
-      type: "Rap",
-    },
-    {
-      poster: "./music/The_House_Of_The_Falling_Sun.webp",
-      src: "https://youtu.be/irhduFFIFWI",
-      name: "The House Of The Falling Sun",
-      type: "Cover",
-    },
-  ];
+}
 
+const Hobbies = ({ linkEnter, linkLeave, scrollProgress }: Hobbies) => {
   const translateY = useTransform(scrollProgress, [0.77, 0.78], [50, 0]);
   const translateValue = useTransform(
     translateY,
-    (latest) => `translateY(${latest}px)`
+    (latest) => `translateY(${latest}px)`,
   );
 
   const opacity = useTransform(scrollProgress, [0.77, 0.78], [0, 1]);
@@ -105,7 +65,7 @@ const Hobbies = ({
               <div
                 className={`absolute z-50 w-[336px] h-[188px] left-1/4 -rotate-20 opacity-0 transition-all duration-700 ease-in-out group-hover:rotate-20 group-hover:opacity-100 group-hover:left-1/2 group-focus:left-1/2 group-focus:rotate-20 group-focus:opacity-100`}
               >
-                <img src={music.poster} alt="" />
+                <img loading="lazy" src={music.poster} alt="" />
               </div>
             </div>
           </a>

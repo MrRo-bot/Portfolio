@@ -35,7 +35,7 @@ const MainButton = ({
             <span
               className="absolute top-0 bottom-0 m-auto transition-all duration-450 ease-in-out left-[.625rem] w-[1.125rem] h-[.125rem] bg-none 
             before:absolute before:content-[''] before:-top-1 before:-right-[0.0625rem] before:size-[0.625rem] before:border-t-[.125rem] before:border-t-solid before:border-t-sky-100 before:border-r-[.125rem] before:border-r-solid before:border-r-sky-100 before:rotate-45
-            after:absolute after:content-['-'] after:text-sky-50 after:font-semibold after:scale-x-200 after:-top-2.5 after:-translate-x-full after:opacity-0 after:transition-all after:duration-500 after:delay-100 after:ease-in-out
+            after:absolute after:content-['-'] after:text-sky-50 after:font-semibold after:scale-x-200 after:-top-[11.5px] after:-translate-x-full after:opacity-0 after:transition-all after:duration-500 after:delay-100 after:ease-in-out
             group-hover:left-4 group-hover:after:translate-x-0 group-hover:after:opacity-100
             "
             ></span>

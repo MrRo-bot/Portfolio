@@ -8,7 +8,7 @@ const ContactUs = ({
   const translateY = useTransform(scrollProgress, [0.93, 0.94], [50, 0]);
   const translateValue = useTransform(
     translateY,
-    (latest) => `translateY(${latest}px)`
+    (latest) => `translateY(${latest}px)`,
   );
 
   const opacity = useTransform(scrollProgress, [0.93, 0.94], [0, 1]);
@@ -45,6 +45,7 @@ const ContactUs = ({
               <img
                 className="size-4 lg:size-6 text-sky-50"
                 src="./logos/mail.svg"
+                loading="lazy"
                 alt=""
               />
               <a href="mailto:chhavimanichoubey@outlook.in">
@@ -55,6 +56,7 @@ const ContactUs = ({
               <img
                 className="size-4 lg:size-6 text-sky-50"
                 src="./logos/whatsapp.svg"
+                loading="lazy"
                 alt=""
               />
               <a href="https://wa.me/7049649604">{"+91 7047649604"}</a>
