@@ -83,7 +83,7 @@ const Projects = ({
               <h3 className="text-3xl lg:text-4xl py-2 font-bold text-sky-50">
                 {project.title}
               </h3>
-              <p className="my-4 lg:text-xl text-sky-50/50 font-roboto">
+              <p className="my-4 lg:text-xl text-sky-50/75 font-roboto">
                 {project.description}
               </p>
               <h4 className="lg:text-lg py-2 font-semibold text-sky-50">

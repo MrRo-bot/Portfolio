@@ -45,6 +45,7 @@ const Hobbies = ({ linkEnter, linkLeave, scrollProgress }: Hobbies) => {
       <div className="mx-auto my-10 flex flex-col items-center justify-center border-t-3 border-sky-50 border-t-solid">
         {music.map((music, index) => (
           <a
+            aria-label={`music name ${music.name}`}
             onMouseEnter={linkEnter}
             onMouseLeave={linkLeave}
             key={`${music}_${index}`}
@@ -56,7 +57,7 @@ const Hobbies = ({ linkEnter, linkLeave, scrollProgress }: Hobbies) => {
               <h3 className="sm:w-max text-center sm:text-left mx-auto wrap-break-word lg:w-1/2 text-xl sm:text-2xl lg:text-4xl py-2 font-bold">
                 {music.name}
               </h3>
-              <span className="sm:w-max lg:w-1/4 text-right font-light text-xl text-sky-50/80">
+              <span className="sm:w-max lg:w-1/4 text-right font-normal text-xl text-sky-50">
                 {music.type}
               </span>
               <span className="sm:w-max lg:w-1/4 text-right text-6xl">

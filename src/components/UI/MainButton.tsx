@@ -21,6 +21,7 @@ const MainButton = ({
       className="mt-8 lg:mt-12 transition-all duration-500 ease-in-out w-max"
     >
       <a
+        aria-label={text}
         onMouseEnter={linkEnter}
         onMouseLeave={linkLeave}
         className="text-red-700 no-underline shadow-none"

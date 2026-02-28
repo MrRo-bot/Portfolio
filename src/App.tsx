@@ -147,7 +147,9 @@ const App = () => {
                   key={i}
                   onClick={() => setIsOpen(!isOpen)}
                 >
-                  <a href={`#${i}`}>{i}</a>
+                  <a aria-label={i} href={`#${i}`}>
+                    {i}
+                  </a>
                 </motion.li>
               );
             })}

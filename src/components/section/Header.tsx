@@ -43,7 +43,7 @@ const Header = ({
           <img
             onMouseEnter={linkEnter}
             onMouseLeave={linkLeave}
-            className="invert-100 group-hover:invert-0 group-focus:invert-0 transition-colors duration-500"
+            className="invert-100 h-auto w-full group-hover:invert-0 group-focus:invert-0 transition-colors duration-500"
             src="./menu.svg"
             fetchPriority="high"
             alt=""

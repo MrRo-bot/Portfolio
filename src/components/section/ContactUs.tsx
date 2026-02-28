@@ -48,7 +48,10 @@ const ContactUs = ({
                 loading="lazy"
                 alt=""
               />
-              <a href="mailto:chhavimanichoubey@outlook.in">
+              <a
+                aria-label="mail id chhavimanichoubey@outlook.in"
+                href="mailto:chhavimanichoubey@outlook.in"
+              >
                 chhavimanichoubey@outlook.in
               </a>
             </div>
@@ -59,7 +62,12 @@ const ContactUs = ({
                 loading="lazy"
                 alt=""
               />
-              <a href="https://wa.me/7049649604">{"+91 7047649604"}</a>
+              <a
+                aria-label="mobile number 7049649604"
+                href="https://wa.me/7049649604"
+              >
+                {"+91 7047649604"}
+              </a>
             </div>
           </div>
         </div>

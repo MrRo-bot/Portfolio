@@ -33,6 +33,7 @@ const Footer = () => {
         <div className="flex gap-2 sm:gap-4 lg:gap-6 mt-12 lg:mt-24 items-center justify-center">
           {links.map((link, index) => (
             <a
+              aria-label={link.name}
               key={`${link.name}_${index}`}
               href={link.link}
               className="group flex size-10 sm:size-12 lg:size-14 transition-all duration-500 ease-in-out items-center justify-center rounded-full text-red-700 hover:text-sky-50 focus:text-sky-50 p-2 bg-red-700 hover:bg-black focus:bg-black hover:drop-shadow-[0_1px_12px_rgba(255,255,255,0.4)] focus:drop-shadow-[0_1px_12px_rgba(255,255,255,0.4)]"

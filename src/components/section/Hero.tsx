@@ -90,7 +90,7 @@ const Hero = ({
             ease: "easeInOut",
             duration: 2,
           }}
-          className="flex justify-end h-full flex-col bg-[url('/circle.webp')] bg-no-repeat bg-cover"
+          className="flex justify-end w-auto h-full flex-col bg-[url('/circle.webp')] bg-no-repeat bg-cover"
         >
           <motion.img
             style={{ filter: blurFilter }}

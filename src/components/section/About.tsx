@@ -160,13 +160,13 @@ const About = ({
             {Object.keys(logos).map((logo, index) => (
               <div
                 key={`${logo}_${index}`}
-                className="relative group inline-block"
+                className="relative group inline-block max-w-14 max-h-14"
               >
                 <img
                   src={`./logos/${logos[logo]}`}
                   alt=""
                   loading="lazy"
-                  className="max-w-14 max-h-14 object-contain rounded-lg transition-transform duration-400 group-hover:scale-105 group-hover:rotate-360 group-focus:scale-105 group-focus:rotate-360 group-active:scale-105 group-active:rotate-360"
+                  className="w-full h-auto object-contain rounded-lg transition-transform duration-400 group-hover:scale-105 group-hover:rotate-360 group-focus:scale-105 group-focus:rotate-360 group-active:scale-105 group-active:rotate-360"
                 />
 
                 <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 scale-y-0 group-hover:scale-y-100 group-focus:scale-y-100 group-active:scale-y-100 transition-transform duration-400 w-max max-w-xs bg-sky-50 text-red-700 text-sm rounded-lg font-bold px-3 py-2 shadow-lg">
