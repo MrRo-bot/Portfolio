@@ -127,7 +127,9 @@ const Projects = ({
                   <source src={project.src} type="video/mp4" />
                 </video>
               ) : (
-                <p className="text-center text-white text-6xl">NA</p>
+                <p className="text-center text-white text-6xl">
+                  Project In Progress...
+                </p>
               )}
             </div>
           </div>
