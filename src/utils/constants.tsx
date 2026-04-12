@@ -17,6 +17,26 @@ interface Music {
 
 export const projects: Projects[] = [
   {
+    title: "Second Cerebro",
+    description: "An AI-Powered Second Brain",
+    skills: [
+      "Next.js 16",
+      "React 19",
+      "MongoDB",
+      "TypeScript",
+      "TailwindCSS",
+      "shadcn",
+      "Zod",
+      "openai",
+      "tiptap",
+      "react-force-graph",
+    ],
+    src: "",
+    poster: "",
+    githubLink: "https://github.com/MrRo-bot/second-cerebro",
+    demoLink: "https://github.com/MrRo-bot/second-cerebro",
+  },
+  {
     title: "Wetter Mobile",
     description: "React Native Expo based app for minimalist weather app.",
     skills: [
@@ -139,6 +159,8 @@ export const logos: { [key: string]: string } = {
   JavaScript: "javascript.svg",
   HTML: "html.svg",
   CSS: "css.svg",
+  "React.js": "react.svg",
+  "Next.js": "nextjs.svg",
   TailwindCSS: "tailwindcss.svg",
   "VS Code": "vscode.svg",
   TypeScript: "typescript.svg",
@@ -158,7 +180,6 @@ export const logos: { [key: string]: string } = {
   npm: "npm.svg",
   Redux: "redux.svg",
   SASS: "sass.svg",
-  "React.js": "react.svg",
   Expo: "expo.svg",
 };
 

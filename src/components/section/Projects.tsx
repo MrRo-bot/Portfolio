@@ -108,23 +108,27 @@ const Projects = ({
               </div>
             </div>
             <div className={`relative cursor-grab w-full lg:w-1/2 h-max`}>
-              <video
-                onMouseEnter={projectEnter}
-                onMouseLeave={projectLeave}
-                ref={(el) => {
-                  videoRefs.current[index] = el;
-                }}
-                preload="metadata"
-                muted
-                playsInline
-                onMouseOver={() => handleMouseOver(index)}
-                onMouseOut={() => handleMouseOut(index)}
-                poster={project.poster}
-                className="rounded-2xl mx-auto aspect-video"
-                key={`video_${index}`}
-              >
-                <source src={project.src} type="video/mp4" />
-              </video>
+              {project.src ? (
+                <video
+                  onMouseEnter={projectEnter}
+                  onMouseLeave={projectLeave}
+                  ref={(el) => {
+                    videoRefs.current[index] = el;
+                  }}
+                  preload="metadata"
+                  muted
+                  playsInline
+                  onMouseOver={() => handleMouseOver(index)}
+                  onMouseOut={() => handleMouseOut(index)}
+                  poster={project.poster}
+                  className="rounded-2xl mx-auto aspect-video"
+                  key={`video_${index}`}
+                >
+                  <source src={project.src} type="video/mp4" />
+                </video>
+              ) : (
+                <p className="text-center text-white text-6xl">NA</p>
+              )}
             </div>
           </div>
         ))}
