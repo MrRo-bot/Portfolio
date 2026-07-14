@@ -104,7 +104,9 @@ const Projects = ({
                   href={project.githubLink}
                   title={"View Project"}
                 />
-                <ProjectButton href={project.demoLink} title={"View Demo"} />
+                {project.demoLink !== "" && (
+                  <ProjectButton href={project.demoLink} title={"View Demo"} />
+                )}
               </div>
             </div>
             <div className={`relative cursor-grab w-full lg:w-1/2 h-max`}>
@@ -127,9 +129,7 @@ const Projects = ({
                   <source src={project.src} type="video/mp4" />
                 </video>
               ) : (
-                <p className="text-center text-white text-6xl">
-                  Project In Progress...
-                </p>
+                <p className="text-center text-white text-6xl">Not Available</p>
               )}
             </div>
           </div>

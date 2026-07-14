@@ -17,7 +17,31 @@ interface Music {
 
 export const projects: Projects[] = [
   {
-    title: "Second Cerebro",
+    title: "YouTube API",
+    description:
+      "My own custom YouTube API using Express.js, Node.js and Mongo.DB",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Bcrypt",
+      "Cloudinary",
+      "Multer",
+      "mongoose-aggregate-paginate-v2",
+      "dotenv",
+      "cookie-parser",
+      "cors",
+      "express-rate-limit",
+    ],
+    src: "",
+    poster: "",
+    githubLink: "https://github.com/MrRo-bot/YouTube_API",
+    demoLink: "",
+  },
+  {
+    title: "Second Cerebro (ongoing)",
     description: "An AI-Powered Second Brain",
     skills: [
       "Next.js 16",
