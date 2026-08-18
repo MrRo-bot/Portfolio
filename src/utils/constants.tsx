@@ -62,7 +62,7 @@ export const projects: Projects[] = [
   },
   {
     title: "Wetter Mobile",
-    description: "React Native Expo based app for minimalist weather app.",
+    description: "React Native Expo based app for minimalist weather app",
     skills: [
       "expo",
       "expo-asset",
@@ -148,7 +148,7 @@ export const projects: Projects[] = [
   },
   {
     title: "Mousike",
-    description: "Spotify UI clone with neomorphism design ",
+    description: "Spotify UI clone with neomorphism design",
     skills: [
       "@fortawesome/react-fontawesome",
       "Nanoid",
@@ -170,12 +170,21 @@ export const projects: Projects[] = [
   },
   {
     title: "Wetter",
-    description: "Weather app with minimal design ",
+    description: "Weather app with minimal design",
     skills: ["React", "TailwindCSS", "JavaScript", "ES6", "Vite", "NPM"],
     src: "./videos/Wetter_DESKTOP.mp4",
     poster: "./videos/Wetter_DESKTOP.webp",
     githubLink: "https://github.com/MrRo-bot/Wetter",
     demoLink: "https://wetterforecast.netlify.app/",
+  },
+  {
+    title: "The Dark Room Photography",
+    description: "Local Photographer's Portfolio",
+    skills: ["HTML", "CSS", "JavaScript", "JQuery"],
+    src: "./videos/Thedarkroomphotography_DESKTOP.mp4",
+    poster: "./videos/Thedarkroomphotography_DESKTOP.webp",
+    githubLink: "https://github.com/MrRo-bot/the-dark-room-photography",
+    demoLink: "https://thedarkroomphotography.netlify.app/",
   },
 ];
 
